@@ -23,18 +23,18 @@
 #     if number % 2 == 0:
 #         print(number, end=" ")
 
-x = int(input("Число: "))
-step = 0
-while x != 1:
-    step += 1 # то же самое что и step = step + 1
-    if x % 2 == 0:
-        print(f"{step})", end=" ")
-        print(x, "/ 2 =", end=" ")
-        x = x // 2 # // чтобы было не 13.0 а 13
-        print(x)
-    else:
-        print(f"{step})", end=" ")
-        print(x, "* 3 + 1 =", end=" ")
-        x = x * 3 + 1
-    print(x)
-print(step, "шагов")
+# x = int(input("Число: "))
+# step = 0
+# while x != 1:
+#     step += 1 # то же самое что и step = step + 1
+#     if x % 2 == 0:
+#         print(f"{step})", end=" ")
+#         print(x, "/ 2 =", end=" ")
+#         x = x // 2 # // чтобы было не 13.0 а 13
+#         print(x)
+#     else:
+#         print(f"{step})", end=" ")
+#         print(x, "* 3 + 1 =", end=" ")
+#         x = x * 3 + 1
+#     print(x)
+# print(step, "шагов")
