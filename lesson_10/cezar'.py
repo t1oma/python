@@ -6,7 +6,10 @@ while not should_end: # пока Should_end != True
     text = (input("Введи сообщение: "))
     text = list(text) # строчка -> список
     shift = int(input("Сдвиг: "))
-
+    if shift > len(alphabet):
+        shift = shift % len(alphabet)
+    elif shift < -len(alphabet):
+        shift = shift % -len(alphabet)
 
 
 
@@ -19,9 +22,14 @@ while not should_end: # пока Should_end != True
             posision = alphabet.index(letter) # какой индекс у  letter
             if posision + shift > len(alphabet): # вышли за верхний предел
                 new_posision = posision * shift - len(alphabet)
-            elif posision + shift < 0:
+            elif posision + shift < 0: # вышли за нижний предел
                 new_posision = posision + shift + len(alphabet)
             else:
                 new_posision = posision + shift
             cipher_text += alphabet[new_posision]
+
+    print(cipher_text)
+    restart = input("Еще раз? y - да, n - нет")
+    if restart == "n":
+        should_end = True
 
