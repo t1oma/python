@@ -23,8 +23,6 @@ def generation_boxes(status1, status2):
     return result
 
 
-
-
 COLORS = ["ФИОЛЕТОВАЯ", "КАЙФОВАЯ", "МАГАДАНСКАЯ", "УНЫЛАЯ"]
 COLOR1 = choice(COLORS)
 COLOR2 = choice(COLORS)
@@ -33,14 +31,6 @@ while COLOR1 == COLOR2: # цвета разные
 
 p1box = "ЗАКРЫТО"
 p2box = "МОРКОВКА"
-
-
-
-
-
-
-
-
 
 
 p1name = input(">>>  Имя первого игрока: ")
@@ -70,4 +60,26 @@ while True:
         print(f"{p2name} сообщает, что в его коробке находится {p1box}")
     else:
         print(f"{p2name} сообщает, что в его коробке находится {p2box}")
+
+    # Обмен
+    change = input("Хочешь меняться?\n"
+                   "Д(меняться) или Н(не меняться)").upper()
+    if change == "Д":
+        p1box, p2box = p2box, p1box # меняем содержимое коробок
+        input(f"{p1name} закрывай глаза, (Enter)...")
+
+        if p2box == "МОРКОВКА":
+            box2 = box_carrot.format(COLOR2.center(13)).split("\n")
+        else:
+            box2 = box_empty.format(COLOR2.center(13)).split("\n")
+
+    else:
+        break
+
+print("========== РЕЗУЛЬТАТЫ ==========")
+print(generation_boxes(p1box, p2box))
+if p1name == "МОРКОВКА":
+    print(p1name, "победил")
+else:
+    print(p2name, "победил")
 
