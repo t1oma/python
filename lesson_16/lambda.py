@@ -96,3 +96,5 @@ def turn(player1) -> None:
     """ход игрока"""
 
 
+
+
