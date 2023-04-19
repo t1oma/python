@@ -2,13 +2,13 @@ import easygui
 import random
 
 def rock_paper_scissors():
-    slovarik = {'ножницы': 'img/a.png',
+    slovarik = {'ножницы': 'img/уважение.png',
                 'камень': 'img/ab.png',
                 'бумага': 'img/abc.png'}
     result = easygui.buttonbox(
         msg='ытыгшуукашщвмвагшдпыщашолщшщзфыщауцш0',
         title='запрети мне носить стон айленд',
-        images=['img/a.png', 'img/ab.png', 'img/abc.png'],
+        images=['img/уважение.png', 'img/ab.png', 'img/abc.png'],
         choices=('выйти',)
     )
     komp = random.choice(list(slovarik.keys()))
