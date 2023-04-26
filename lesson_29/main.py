@@ -106,68 +106,68 @@ root.geometry("300x200")
 
 
 # задача 4
-# def bold():
-#     if val_bold.get() == True: # если отметка есть
-#         lab["font"] += " bold"
-#     else: # когда отметки нет
-#         lab["font"] = lab["font"].replace(" bold", "")
-#
-#
-# def italic():
-#     if val_italic.get() == True: # если отметка есть
-#         lab["font"] += " italic"
-#     else: # когда отметки нет
-#         lab["font"] = lab["font"].replace(" italic", "")
-#
-# def underline():
-#     if val_underline.get() == True: # если отметка есть
-#         lab["font"] += " underline"
-#     else: # когда отметки нет
-#         lab["font"] = lab["font"].replace(" underline", "")
-#
-# def overstrike():
-#     if val_overstrike.get() == True: # если отметка есть
-#         lab["font"] += " overstrike"
-#     else: # когда отметки нет
-#         lab["font"] = lab["font"].replace(" overstrike", "")
-#
-# lab = Label(root, text="Я текст", font="Arial 15")
-# lab.pack()
-#
-# val_bold = BooleanVar() # True - есть, False - нет
-# cb_bold = Checkbutton(root,
-#                       text="Жирный",
-#                       command=bold,
-#                       variable=val_bold,
-#                       onvalue=True,
-#                       offvalue=False)
-# cb_bold.pack()
-#
-# val_italic = BooleanVar()
-# cb_italic = Checkbutton(root,
-#                         text="Курсив",
-#                         command=italic,
-#                         variable=val_italic,
-#                         onvalue=True,
-#                         offvalue=False)
-# cb_italic.pack()
-# val_underline = BooleanVar()
-# cb_underline = Checkbutton(root,
-#                       text="Подчеркнутый",
-#                       command=underline,
-#                       variable=val_underline,
-#                       onvalue=True,
-#                       offvalue=False)
-# cb_underline.pack()
-# val_overstrike = BooleanVar()
-# cb_overstrike = Checkbutton(root,
-#                       text="Зачеркнутый",
-#                       command=overstrike,
-#                       variable=val_overstrike,
-#                       onvalue=True,
-#                       offvalue=False)
-# cb_overstrike.pack()
-# cb_bold.pack()
+def bold():
+    if val_bold.get() == True: # если отметка есть
+        lab["font"] += " bold"
+    else: # когда отметки нет
+        lab["font"] = lab["font"].replace(" bold", "")
+
+
+def italic():
+    if val_italic.get() == True: # если отметка есть
+        lab["font"] += " italic"
+    else: # когда отметки нет
+        lab["font"] = lab["font"].replace(" italic", "")
+
+def underline():
+    if val_underline.get() == True: # если отметка есть
+        lab["font"] += " underline"
+    else: # когда отметки нет
+        lab["font"] = lab["font"].replace(" underline", "")
+
+def overstrike():
+    if val_overstrike.get() == True: # если отметка есть
+        lab["font"] += " overstrike"
+    else: # когда отметки нет
+        lab["font"] = lab["font"].replace(" overstrike", "")
+
+lab = Label(root, text="Я текст", font="Arial 15")
+lab.pack()
+
+val_bold = BooleanVar() # True - есть, False - нет
+cb_bold = Checkbutton(root,
+                      text="Жирный",
+                      command=bold,
+                      variable=val_bold,
+                      onvalue=True,
+                      offvalue=False)
+cb_bold.pack()
+
+val_italic = BooleanVar()
+cb_italic = Checkbutton(root,
+                        text="Курсив",
+                        command=italic,
+                        variable=val_italic,
+                        onvalue=True,
+                        offvalue=False)
+cb_italic.pack()
+val_underline = BooleanVar()
+cb_underline = Checkbutton(root,
+                      text="Подчеркнутый",
+                      command=underline,
+                      variable=val_underline,
+                      onvalue=True,
+                      offvalue=False)
+cb_underline.pack()
+val_overstrike = BooleanVar()
+cb_overstrike = Checkbutton(root,
+                      text="Зачеркнутый",
+                      command=overstrike,
+                      variable=val_overstrike,
+                      onvalue=True,
+                      offvalue=False)
+cb_overstrike.pack()
+cb_bold.pack()
 
 
 # задача 5
@@ -187,7 +187,9 @@ root.geometry("300x200")
 
 
 # задача 6
-ima = PhotoImage(file="уважение.png").subsample(3,3)
-lab = Label(root,image=ima)
-lab.pack()
+# ima = PhotoImage(file="уважение.png").subsample(3,3)
+# lab = Label(root,image=ima)
+# lab.pack()
+
+
 root.mainloop()
