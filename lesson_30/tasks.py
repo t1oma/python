@@ -12,7 +12,7 @@ win.geometry("500x500")
 # Button(win, text="Авторизация").grid(column=1, row=2, sticky=E)
 
 
-# Задача 2
+#Задача 2
 # from random import randint
 # def move(e):
 #     btn.place(x=random.randint(0, 300), y=random.randint(0, 300))
@@ -64,7 +64,7 @@ win.geometry("500x500")
 #     ent['state'] = 'readonly'
 #
 # phrase = ["", ""]
-# lst1 = ["обоятельный", "нервный", "здравый", "опасный", "саблезубый", "заниженный", "адекватный"]
+# lst1 = ["обаятельный", "нервный", "здравый", "опасный", "саблезубый", "заниженный", "адекватный"]
 # lst2 = ["пакет", "доклад", "гость", "заезд", "поршень", "унитаз", "объект"]
 # lst1tk = StringVar(value=lst1)
 # lst2tk = StringVar(value=lst2)
@@ -86,9 +86,9 @@ win.geometry("500x500")
 # Задача 5
 def hello():
     if gender.get() == 1:
-        messagebox.showinfo("хело мир манера крутит мир", f"Мистер {ent1.get()}")
+        messagebox.showinfo("хело мир манера крутит мир", f"Здравствуйте, Мистер {ent1.get()}")
     else:
-        messagebox.showinfo("хело мир манера крутит мир", f"Мисис {ent1.get()}")
+        messagebox.showinfo("хело мир манера крутит мир", f"Здравствуйте, Миссис {ent1.get()}")
 
 ent1 = Entry(win)
 ent1.grid(row=0, column=1)
