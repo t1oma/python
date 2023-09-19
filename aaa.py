@@ -73,6 +73,108 @@ import random
 #     else:
 #         b.append(bol.index(a[i]) + 1)
 # print(b)
+#
+# a = int(input())
+# print(format(a, ','))
 
-a = int(input())
-print(format(a, ','))
+# -----------------------------------------------------------
+# урок 2
+# задача 1
+# x = [2, 3, 4, 5, 6]
+# print(sum(x))
+
+# x = [2, 3, 4, 5, 6]
+# print(max(x))
+# print(min(x))
+# y = sorted(x)
+# print(y[0], y[-1])
+
+# задача 2
+# f = "Тетради Ус Москва обнимать?!"
+# print(f"{f[3:16:3]}{f[-5:-2]}")
+
+# 3 задача
+l = [1, 2, 2, 3, 1, 4]
+# temp = []
+# for x in l:
+#     if x not in temp:
+#         temp.append(x)
+# print(temp)
+
+# for elem in l:
+#     if l.count(elem) > 1:
+#         l.remove(elem)
+# print(l)
+
+# anton = [1, 3.14, 2, "Антон"]
+# f = {}
+# c = 0
+# c += 1
+# for i in anton:
+#     if type(i) in f:
+#         f[type(i)] += 1
+#     else:
+#         f[type(i)] = 1
+# print(f)
+
+# x1 = [1, 4, 5, 6]
+# x2 = [2, 7]
+# print(sorted(x1 + x2))
+
+# задача 6
+# x = "Привет, мир".lower()
+# f = {}
+# stop = "1234567890,!.@#$%^&*"
+# for elem in x:
+#     if elem not in stop:
+#         f[elem] = x.count(elem)
+# print(f)
+
+# задача 7
+# import string
+# bol = string.ascii_uppercase
+# mal = string.ascii_lowercase
+# f = {}
+# for i in range(len(mal)):
+#     f[mal[i]] = bol[i]
+# print(f)
+
+# задача 8
+# b = 0
+# while True:
+#     a = input().lower().split(' ')
+#     if a[0] == "exit":
+#         exit()
+#     elif a[0] == "result":
+#         print(b)
+#     elif a[0] == "zero":
+#         b = 0
+#     elif a[0] == "add":
+#         b += int(a[-1])
+#     elif a[0] == "mul":
+#         b *= int(a[-1])
+#     elif a[0] == "minus":
+#         b -= int(a[-1])
+#     elif a[0] == "div":
+#         b //= int(a[-1])
+
+c = 0
+d = {
+    "add": lambda x: c + x,
+    "mul": lambda x: c * x,
+    "minus": lambda x: c - x,
+    "div": lambda x: c // x,
+}
+
+while True:
+    vvod = input().split()
+    if len(vvod) == 1:  # zero, result, exit
+        vvod = vvod[0]  # ['result'] -> result
+        if vvod == "exit":
+            break
+        elif vvod == "result":
+            print(c)
+        elif vvod == "zero":
+            c = 0
+    else:  # add, mul, minus, div
+        c = d[vvod[0]](int(vvod[1]))
