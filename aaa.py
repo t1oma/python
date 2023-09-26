@@ -94,7 +94,7 @@ import random
 # print(f"{f[3:16:3]}{f[-5:-2]}")
 
 # 3 задача
-l = [1, 2, 2, 3, 1, 4]
+# l = [1, 2, 2, 3, 1, 4]
 # temp = []
 # for x in l:
 #     if x not in temp:
@@ -158,23 +158,84 @@ l = [1, 2, 2, 3, 1, 4]
 #     elif a[0] == "div":
 #         b //= int(a[-1])
 
-c = 0
-d = {
-    "add": lambda x: c + x,
-    "mul": lambda x: c * x,
-    "minus": lambda x: c - x,
-    "div": lambda x: c // x,
-}
+# c = 0
+# d = {
+#     "add": lambda x: c + x,
+#     "mul": lambda x: c * x,
+#     "minus": lambda x: c - x,
+#     "div": lambda x: c // x,
+# }
+#
+# while True:
+#     vvod = input().split()
+#     if len(vvod) == 1:  # zero, result, exit
+#         vvod = vvod[0]  # ['result'] -> result
+#         if vvod == "exit":
+#             break
+#         elif vvod == "result":
+#             print(c)
+#         elif vvod == "zero":
+#             c = 0
+#     else:  # add, mul, minus, div
+#         c = d[vvod[0]](int(vvod[1]))
 
-while True:
-    vvod = input().split()
-    if len(vvod) == 1:  # zero, result, exit
-        vvod = vvod[0]  # ['result'] -> result
-        if vvod == "exit":
-            break
-        elif vvod == "result":
-            print(c)
-        elif vvod == "zero":
-            c = 0
-    else:  # add, mul, minus, div
-        c = d[vvod[0]](int(vvod[1]))
+
+
+# -------------------------------------- 3 урок
+# def bimbim(x:int = "Ы") -> int:  # type hint
+#     """Функция"""
+#     return x
+#
+# result = bimbim()
+
+# def aoa(s, *args, **kwargs):
+#     # args - позиционные аргументы
+#     # kwargs - keywords arguments
+#     print(args) # кортеж
+#     print(kwargs) # словарь
+#     print(s)
+#
+# print(aoa(1, 2, 3, a=32, soroka="e"))
+
+# 1 задача
+# def foo(**kwargs):
+#     for i in kwargs:
+#         print(i.ljust(30) + str(kwargs[i]).rjust(10))
+#     print("-" * 40)
+#     print(str(sum(kwargs.values())).rjust(40))
+#
+# foo(apple=105, banana=230, tutifruti=132)
+
+# задача 2
+# def camel2snake(stroka:str) -> str:
+#     a = ""
+#     for i in range(len(stroka)):
+#         if stroka[i].isupper():
+#             a += "_" + stroka[i].lower()
+#         else:
+#             a += stroka[i]
+#     return a
+#
+# print(camel2snake("word"))
+# print(camel2snake("wordSecond"))
+
+
+# ООП: инкапсуляция, полиморфизм, наследование
+# Объектно ориентированное программирование
+class Human:
+    def say(self, phrase):  # метод публичный
+        self.__vdoh()  # вызов приватного метода (только в классе)
+        return "privet," + phrase
+
+    def __vdoh(self):  # метод приватный
+        print("делаю вдох так пахнет диор")
+
+    def __init__(self):  # магический метод
+        self.age = 5  # атрибут динамический
+
+petr = Human() # создание объекта на основе класса -> init
+print(petr.say("Artem"))
+print(petr._Human__vdoh())  # ОТСТОЙ
+print()
+igor = Human()  # init
+print(petr.age)
