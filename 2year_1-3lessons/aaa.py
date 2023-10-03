@@ -220,22 +220,3 @@ import random
 # print(camel2snake("wordSecond"))
 
 
-# ООП: инкапсуляция, полиморфизм, наследование
-# Объектно ориентированное программирование
-class Human:
-    def say(self, phrase):  # метод публичный
-        self.__vdoh()  # вызов приватного метода (только в классе)
-        return "privet," + phrase
-
-    def __vdoh(self):  # метод приватный
-        print("делаю вдох так пахнет диор")
-
-    def __init__(self):  # магический метод
-        self.age = 5  # атрибут динамический
-
-petr = Human() # создание объекта на основе класса -> init
-print(petr.say("Artem"))
-print(petr._Human__vdoh())  # ОТСТОЙ
-print()
-igor = Human()  # init
-print(petr.age)
